@@ -1,1 +1,22 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/UDdkOEMs)
+## Requirements
+
+> - Python >= 3.9.16
+> - PyTorch >= 1.12.1
+> - Platforms: Ubuntu 22.04, CUDA 11.6
+> - Run `conda env create -f requirements.yaml` to create a new conda environment.
+> - Run `pip install -e torchlight`.
+
+## Data Preparation
+
+Run `python data_processing.py`.
+
+## Training
+
+```bash
+# Train SkateFormer
+python main.py --model_name skateformer --config ./config/train/assistive_furniture/SkateFormer_j.yaml
+
+# Train STGCN
+python main.py --model_name stgcn
+
+```
